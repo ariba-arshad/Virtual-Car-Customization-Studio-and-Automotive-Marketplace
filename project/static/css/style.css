@@ -1,0 +1,394 @@
+    .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+	
+	.faqsection {
+        color: black
+    }   
+
+    /* CSS for adding space between the footer and the team section */
+    .faqsection #team {
+        border: 2px solid #ccc; /* Border styling */
+        padding: 20px; /* Adding padding inside the border */
+        border-radius: 10px; /* Adding rounded corners to the border */
+        margin-bottom: 50px; /* Margin between Team section and footer */
+    }
+    /* Add styles for the question box and dropdown arrow */
+    .faqsection .faq-question {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .faqsection .question-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .faqsection .dropdown-arrow {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .faqsection .open {
+        transform: rotate(180deg);
+    }
+
+    .faqsection .faq-answer {
+        display: none;
+        padding-top: 10px;
+    }
+
+    .faqsection .answer-visible {
+        display: block;
+    }
+
+
+/* CSS for inline display */
+.radio-group {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+    align-items: center;
+    justify-content: center; /* Center the radio buttons horizontally */
+}
+
+/* Optional: Style the labels for better visibility */
+label {
+    margin-right: 5px;
+}
+
+/*------------------------------------------------------
+------------------------------------------------------*/
+
+.account {
+    padding: 15px 0;
+    background: #efefef;
+}
+
+.account h2 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.account ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.account ol li + li {
+    padding-left: 10px;
+}
+
+.account ol li + li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #333333;
+    content: "/";
+}
+
+/*------------------------------------------------------
+------------------------------------------------------*/
+
+.section2 {
+    background-image: url('https://blenderartists.org/uploads/default/original/4X/0/a/3/0a385bcbfa5e0e478b606086b501f7cbc6159648.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section2 .passwordBox {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: transparent;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.section2 .body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section2 .Box {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: transparent;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 .Box2 {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: transparent;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+}
+
+.section2 p2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.section2 input[type="button"] {
+    margin-bottom: 10px;
+    color: #bb0a1e;
+    background-color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+.section2 input[type="text"] {
+    height: 18px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-color: none;
+    width: 320px;
+    height: 40px;
+}
+
+.section2 input[type="password"] {
+    height: 18px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-color: none;
+    width: 320px;
+    height: 40px;
+}
+
+.section2 input[type="date"] {
+    height: 18px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-color: none;
+    width: 320px;
+    height: 40px;
+    color: darkslategrey;
+}
+
+.section2 input::placeholder {
+    color: darkslategrey;
+}
+
+
+.section2 input[type="submit"] {
+    background-color: black;
+    border: none;
+    border-color: none;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s;
+    height: 40px;
+    text-align: center;
+    width: 320px;
+}
+
+.section2 input[type="submit"]:hover {
+    background-color: #333333;
+}
+
+.section2 label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-left: 30%
+}
+
+.section2 text {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.section2 date {
+    font-size: 18px;
+}
+
+.section2 time {
+    font-size: 18px;
+}
+
+.section2 hr {
+    border-top: 2px solid #bb0a1e;
+    margin: 20px 0;
+}
+
+.section2 p1 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.section2.section1 {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+/*------------------------------------------------
+------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Section Title
+--------------------------------------------------------------*/
+.title1 {
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+}
+
+.title1 h2 {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    color: #555555;
+    position: relative;
+    z-index: 2;
+}
+
+.title1 h3 {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    color: lightgray;
+    position: relative;
+    z-index: 2;
+}
+
+.title1 span2 {
+    position: absolute;
+    top: 30px;
+    color: #ad6f52;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+.title1 span {
+    position: absolute;
+    top: 30px;
+    color: lightgray;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+.title1 span1 {
+    position: absolute;
+    top: 30px;
+    color: #F2F3F5;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+.title1 p {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 575px) {
+    .title1 h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .title1 span {
+        font-size: 38px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+--------------------------------------------------------------*/
+.breadcrumbs {
+    padding: 15px 0;
+    background: #efefef;
+}
+
+    .breadcrumbs h2 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .breadcrumbs ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0 0 10px 0;
+        margin: 0;
+        font-size: 14px;
+    }
+
+        .breadcrumbs ol li + li {
+            padding-left: 10px;
+        }
+
+            .breadcrumbs ol li + li::before {
+                display: inline-block;
+                padding-right: 10px;
+                color: #333333;
+                content: "/";
+            }

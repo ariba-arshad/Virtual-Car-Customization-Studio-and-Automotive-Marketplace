@@ -1,0 +1,216 @@
+/*
+Template Name: Tool Store
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************blog****************/
+
+/* Additional styles for the small 'POST' button */
+.small-button {
+    padding: 5px 10px; /* Adjust padding for a smaller button */
+    background-color: #ff0000; /* Red background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+    .small-button:hover {
+        background-color: #cc0000; /* Darker red on hover */
+    }
+
+/* CSS for adding space between the footer and the team section */
+#team {
+    border: 2px solid #ccc; /* Border styling */
+    padding: 20px; /* Adding padding inside the border */
+    border-radius: 10px; /* Adding rounded corners to the border */
+    margin-bottom: 50px; /* Margin between Team section and footer */
+}
+/* Styles for the 'Make a Post' form */
+/* Improved styles for the 'Make a Post' section */
+/* Updated styles for the 'Make a Post' section */
+#blog #make-post {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+    #blog #make-post h3 {
+        margin-bottom: 20px;
+        color: #ff0000; /* Red color for the heading */
+        text-align: center;
+    }
+
+    #blog #make-post .faq-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    #blog #make-post .faq-button,
+    #blog #make-post .button { /* Matching style for both buttons */
+        width: 100%;
+        padding: 10px;
+        background-color: #ff0000; /* Red background color */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-family: Arial, sans-serif; /* Apply the same font family */
+    }
+
+        #blog #make-post .faq-button:hover,
+        #blog #make-post .button:hover { /* Hover effect */
+            background-color: #cc0000; /* Darker red on hover */
+        }
+/* Adding a highlighting effect on hover for the blog post section */
+
+/* Adding a highlighting effect on hover for the 'Make a Post' section */
+#make-post:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example: Adding a box-shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Adding a transition effect */
+}
+
+
+#blog{
+ padding-top:40px;
+ padding-bottom:40px;
+ }
+.blog_1l{
+ border:1px solid #ea1c261f;
+ padding:30px 15px;
+ }
+.blog_1l .form-control {
+    height: 48px;
+    font-size: 18px;
+    border-color: #ea1c261f;
+    box-shadow: none;
+	border-radius:0;
+}
+.blog_1l .input-group .btn {
+    background: #ea1c26;
+    margin-left: 0!important;
+    padding: 10.5px 20px;
+    font-size: 18px;
+	border-radius:0;
+	border-color:#ea1c26;
+} 
+.blog_1l h4 span{
+margin-right:5px; 
+ }
+.product_1li img{
+float:left;
+margin-right:20px; 
+ }
+.product_1li h6 .span_1{
+margin-right:5px;
+ }
+.product_1li h6 .span_2{
+margin-right:5px;
+margin-left:20px;
+ }
+.product_1li{
+margin-top:15px;
+border-bottom:1px solid #ea1c261f;
+padding-bottom:15px; 
+ }
+.blog_1l ul li {
+display:inline-block;
+margin:5px 5px 8px 0px;
+font-size:16px; 
+ } 
+.blog_1l ul li a {
+display:block;
+background:#ea1c260f;
+padding:8px 14px;
+ }
+.blog_1l ul li a:hover {
+background:#ea1c26;
+color:#fff;
+ }
+.blog_1li{
+box-shadow: 0 0 10px #ea1c2636;
+padding:26px 15px 30px 15px;
+margin-top:15px;  
+ }
+.blog_1li .button{
+display:block;
+text-align:center;
+ } 
+.product_1_last{
+margin-top:20px; 
+ }
+.product_1_last ul li{
+ display:inline-block;
+ margin: 0 2px;
+ width:45px;
+ height:45px;
+ line-height:45px;
+ background:#ea1c260f; 
+ text-align:center;
+ }
+.product_1_last ul li a{
+display:block;
+color: #ea1c26;
+ }
+.product_1_last ul li:hover{
+ background: #ea1c26;
+ }
+.product_1_last ul li:hover a{
+ color: #fff;
+ }
+.act{
+  background: #ea1c26!important;
+ }
+.act a{
+ color: #fff!important;
+ }
+.blog_home_1i{
+padding:15px;
+box-shadow: 0 0 10px #ea1c2636;
+ }
+.blog_home_1{
+margin-top:30px; 
+ }
+
+/*********************blog_end****************/
+
+@media screen and (max-width : 767px){
+#blog{
+text-align:center; 
+ }
+.product_1li img {
+    float: none;
+    margin-right:0;
+	margin-bottom:10px;
+}
+.blog_home_1i {
+margin-top:15px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1220px) {
+
+ }
+
+
+
+

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Create Account</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+    <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">        
+    <link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet"> 
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header_1 clearfix">
+                    <div class="col-sm-3">
+                        <div class="header_1l clearfix">
+                            <h2 class="mgt"><a href="indexbefore.html"><i class="fa fa-car"></i> <span class="col_1">Auto</span>Hub</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="header_1m clearfix">
+
+                        </div>
+                        <div class="header_1r clearfix">
+                            <ul class="nav navbar-nav mgt navbar-right">
+                                <li><a class="tag_m1" style="color: black; href="login.html"><i class="fa fa-user"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+<main id="main">
+
+       
+        <section id="section2" class="section2">
+
+            <div class="title1">
+                <span>Create Account</span>
+            </div>
+            <br>
+                <form>
+                <div style="text-align: center; color: white;">
+                    <input type="radio" id="user-radio" name="status-radio" checked>
+                    <label1 for="user-radio">User</label1>
+                    &nbsp &nbsp &nbsp &nbsp
+                    <input type="radio" id="mechanic-radio" name="status-radio">
+                    <label1 for="mechanic-radio">Mechanic</label1>
+                    &nbsp &nbsp &nbsp &nbsp
+                    <input type="radio" id="seller-radio" name="status-radio">
+                    <label1 for="seller-radio">Seller</label1>
+                </div>
+            </form>
+
+            <div id="user-form">
+                <form method="POST" onsubmit="return validateForm();">
+                    <div class="body">
+                        <div class="Box">
+                            <br />
+                            <br />
+
+                            <input type="hidden" name="participantType" value="user">
+
+                            <input type="text" id="firstName" name="firstName" required placeholder="First Name" class="login-input">
+
+                            <input type="text" id="lastName" name="lastName" required placeholder="Last Name" class="login-input">
+
+                            <input type="text" id="userName" name="userName" required placeholder="User Name" class="login-input">
+
+                            <input type="text" id="creditCardNo" name="creditCardNo" required placeholder="Credit Card Number" class="login-input">
+
+                            <input type="text" id="address" name="address" required placeholder="Address" class="login-input">
+
+                            <input type="text" id="phone" name="phone" required placeholder="Phone Number" class="login-input">
+
+                            <input type="text" id="email" name="email" required placeholder="Email" class="login-input">
+
+                            <input type="password" id="password" name="password" required placeholder="Password" class="login-input">
+
+
+                            <br />
+                            <br />
+                            <p1> By creating an account, you are agreeing to our Terms and Conditions. </p1>
+
+                            <br />
+                            <br />
+
+                            <input type="submit" value="Create an Account" name="insert" class="login-submit">
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="mechanic-form" style="display:none">
+                <form method="POST" onsubmit="return validateForm();">
+                    <div class="body">
+                        <div class="Box">
+                            <br />
+                            <br />
+
+                            <input type="hidden" name="participantType" value="mechanic">
+
+                            <input type="text" id="firstName" name="firstName" required placeholder="First Name" class="login-input">
+
+                            <input type="text" id="lastName" name="lastName" required placeholder="Last Name" class="login-input">
+
+                            <input type="text" id="userName" name="userName" required placeholder="User Name" class="login-input">
+
+                            <input type="text" id="creditCardNo" name="creditCardNo" required placeholder="Credit Card Number" class="login-input">
+
+                            <input type="text" id="address" name="address" required placeholder="Address" class="login-input">
+
+                            <input type="text" id="phone" name="phone" required placeholder="Phone Number" class="login-input">
+
+                            <input type="text" id="email" name="email" required placeholder="Email" class="login-input">
+
+                            <input type="password" id="password" name="password" required placeholder="Password" class="login-input">
+
+                            <input type="text" id="companyName" name="companyName" required placeholder="Company Name" class="login-input">
+
+                            <input type="text" id="description" name="description" required placeholder="Description" class="login-input">
+
+                            <input type="text" id="specialization" name="specialization" required placeholder="Specialization" class="login-input">
+
+                            <br />
+                            <br />
+                            <p1> By creating an account, you are agreeing to our Terms and Conditions. </p1>
+
+                            <br />
+                            <br />
+
+                            <input type="submit" value="Create an Account" name="insert" class="login-submit">
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="seller-form" style = "display:none">
+                <form method="POST" onsubmit="return validateForm();">
+                    <div class="body">
+                        <div class="Box">
+                            <br />
+                            <br />
+
+                            <input type="hidden" name="participantType" value="seller">
+
+                            <input type="text" id="firstName" name="firstName" required placeholder="First Name" class="login-input">
+
+                            <input type="text" id="lastName" name="lastName" required placeholder="Last Name" class="login-input">
+
+                            <input type="text" id="userName" name="userName" required placeholder="User Name" class="login-input">
+
+                            <input type="text" id="creditCardNo" name="creditCardNo" required placeholder="Credit Card Number" class="login-input">
+
+                            <input type="text" id="address" name="address" required placeholder="Address" class="login-input">
+
+                            <input type="text" id="phone" name="phone" required placeholder="Phone Number" class="login-input">
+
+                            <input type="text" id="email" name="email" required placeholder="Email" class="login-input">
+
+                            <input type="password" id="password" name="password" required placeholder="Password" class="login-input">
+
+                            <input type="text" id="companyName" name="companyName" required placeholder="Company Name" class="login-input">
+
+                            <input type="text" id="description" name="description" required placeholder="Description" class="login-input">
+
+
+                            <br />
+                            <br />
+                            <p1> By creating an account, you are agreeing to our Terms and Conditions. </p1>
+
+                            <br />
+                            <br />
+
+                            <input type="submit" value="Create an Account" name="insert" class="login-submit">
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            </section>
+        </main>
+
+        <section id="footer" class="clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="footer_1 clearfix">
+                    <div class="col-sm-3">
+                        <div class="footer_1l clearfix">
+                            <h2 class="mgt"><a href="#" style="color: black;"><span class="col_1">Auto</span>Hub</a></h2>
+                            <p >Our dedicated admin team at AutoHub ensures seamless operations and quality control to provide customers with a reliable source for high-quality automotive spare parts.</p>
+                            <div class="footer_1li cleafix">
+                                <span class="col_1"><i class="fa fa-headphones"></i></span>
+                                <h5>Customer Support</h5>
+                                <h4><a href="#" style="color: black;">(00) 123 456 789</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="footer_1m clearfix">
+
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer_1r clearfix">
+                            <h4>Information</h4>
+                            <ul>
+                                <li><a href="#" style="color: black;">About Us <span class="pull-right">Secure payment</span></a></li>
+                                <li><a href="#" style="color: black;">Contact Us <span class="pull-right">Sitemap</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_2 text-center clearfix">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </script>
+
+        <script>
+        const userRadio = document.getElementById("user-radio");
+        const mechanicRadio = document.getElementById("mechanic-radio");
+        const sellerRadio = document.getElementById("seller-radio");
+        const userForm = document.getElementById("user-form");
+        const mechanicForm = document.getElementById("mechanic-form");
+        const sellerForm = document.getElementById("seller-form");
+
+        userRadio.addEventListener("click", function () {
+            userForm.style.display = "block";
+            mechanicForm.style.display = "none";
+            sellerForm.style.display = "none";
+        });
+
+        mechanicRadio.addEventListener("click", function () {
+            userForm.style.display = "none";
+            mechanicForm.style.display = "block";
+            sellerForm.style.display = "none";
+        });
+
+        sellerRadio.addEventListener("click", function () {
+            userForm.style.display = "none";
+            mechanicForm.style.display = "none";
+            sellerForm.style.display = "block";
+        });
+
+    </script>
+
+    </body>
+
+</html>

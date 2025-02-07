@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/checkout.css') }}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+	<script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </head>
+  
+<body>
+<section id="header">
+		<div class="container">
+			<div class="row">
+				<div class="header_1 clearfix">
+					<div class="col-sm-3">
+						<div class="header_1l clearfix">
+							<h2 class="mgt"><a href="/indexafter.html/{{ participant_id }}"><i class="fa fa-car"></i> <span class="col_1">Auto</span>Hub</a></h2>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="header_1m clearfix">
+
+						</div>
+						<div class="header_1r clearfix">
+							<ul class="nav navbar-nav mgt navbar-right">
+								<li class="dropdown">
+									<a class="tag_m1" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i></a>
+									<ul class="dropdown-menu drop_1" role="menu">
+										<li>
+											<div class="drop_1i clearfix">
+												<div class="col-sm-12">
+													<div class="drop_1il text-center clearfix">
+														<h5 class="mgt"><a href="/participant_profile/{{ participant_id }}">View Profile</a></h5>
+														<h5><a href="/indexbefore.html">Log Out</a></h5>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="tag_m1" href="/cart/{{ participant_id }}"  role="button" aria-expanded="false"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="menu" class="clearfix cd-secondary-nav">
+		<nav class="navbar nav_t">
+			<div class="container">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/indexafter.html/{{ participant_id }}"><i class="fa fa-wrench"></i> <span class="col_1">Auto</span> Hub</a>
+				</div>
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+
+						<li><a class="m_tag active_tab" href="/indexafter.html/{{ participant_id }}">Home</a></li>
+						<li>
+							<a class="m_tag" href="/product/{{ participant_id }}"  role="button" aria-expanded="false">Product</a>
+							
+						</li>
+
+						<li><a class="m_tag" href="/forum.html/{{ participant_id }}">Forum</a></li>
+						
+						<li><a class="m_tag" href="/services.html/{{ participant_id }}">Services</a></li>
+						
+						<li><a class="m_tag" href="https://play.unity.com/mg/other/webgl-builds-381059">3D Car Modification</a></li>
+
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+	</section>
+
+		
+<section id="center" class="clearfix center_shop">
+<div class="container">
+ <div class="row">
+   <div class="center_shop_1 clearfix">
+    <div class="col-sm-6">
+	 <div class="center_shop_1l clearfix">
+	  <h3 class="mgt">Checkout</h3>
+	 </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="center_shop_1r text-right clearfix">
+	  <h5><a class="col_2" href="#">Home</a> / <span>Checkout</span></h5>
+	 </div>
+	</div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section id="checkout" class="clearfix">
+ <div class="container">
+  <div class="row">
+   <div class="checkout_1 clearfix">
+    <div class="col-sm-8">
+	  <div class="checkout_1l clearfix">
+	   <h3 class="mgt">Make Your Checkout</h3>
+	  </div><br>
+	  <div class="checkout_1l1 clearfix">
+    <div class="col-sm-6 space_left">
+        <h5>First Name</h5>
+        <p class="form-control-static">{{ checkout_details[0]['fname'] }}</p>
+    </div>
+    <div class="col-sm-6 space_left">
+        <h5>Last Name</h5>
+        <p class="form-control-static">{{ checkout_details[0]['lname'] }}</p>
+    </div>
+</div>
+<br>
+<div class="checkout_1l1 clearfix">
+    <div class="col-sm-6 space_left">
+        <h5>Email Address</h5>
+        <p class="form-control-static">{{ checkout_details[0]['email'] }}</p>
+    </div>
+    <div class="col-sm-6 space_left">
+        <h5>Phone Number</h5>
+        <p class="form-control-static">{{ checkout_details[0]['phoneNo'] }}</p>
+    </div>
+</div>
+<br>
+<div class="checkout_1l1 clearfix">
+    <div class="col-sm-6 space_left">
+        <h5>Address</h5>
+        <p class="form-control-static">{{ checkout_details[0]['address'] }}</p>
+    </div>
+    <div class="col-sm-6 space_left">
+        <h5>Company Name</h5>
+        <p class="form-control-static">{{ checkout_details[0]['companyName'] }}</p>
+    </div>
+</div>
+
+	</div>
+	 <div class="col-sm-4">
+       <div class="checkout_1r clearfix">
+	     <h4 class="mgt">CART TOTALS</h4>
+	     <hr class="hr_1">
+		<h5>Sub Total <span class="pull-right">Rs. {{ totalBill }}</span></h5>
+		<h5>(+) Delivery Charges <span class="pull-right">Rs. {{ deliveryCharges }}</span></h5>
+		<hr class="hr_2"> 
+		<h5>Total <span class="pull-right">Rs. {{ total }}</span></h5><br>
+		 <h4>PAYMENTS</h4>
+	     <hr class="hr_1">
+	     
+		<form method="post" action="/checkout/{{ participant_id }}">
+    <p>
+    <input type="radio" name="payment_method" value = "online" id="online_payment">
+    <label for="online_payment">Online Payment</label>
+		</p>
+		<p>
+		    <input type="radio" name="payment_method" value = "cash" id="cash_on_delivery" checked>
+		    <label for="cash_on_delivery">Cash On Delivery</label>
+		</p>
+
+
+    <h6><a class="button" href="#" name="submit_checkout" onclick="document.forms[0].submit();">PROCEED TO CHECKOUT</a></h6>
+</form>
+
+	   </div>
+	  </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+	<section id="footer" class="clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="footer_1 clearfix">
+					<div class="col-sm-3">
+						<div class="footer_1l clearfix">
+							<h2 class="mgt"><a href="#"><span class="col_1">Auto</span>Hub</a></h2>
+							<p>Our dedicated admin team at AutoHub ensures seamless operations and quality control to provide customers with a reliable source for high-quality automotive spare parts.</p>
+							<div class="footer_1li cleafix">
+								<span class="col_1"><i class="fa fa-headphones"></i></span>
+								<h5>Customer Support</h5>
+								<h4><a href="#">(00) 123 456 789</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div class="footer_1m clearfix">
+
+							<ul class="social-network social-circle">
+								<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+								<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="footer_1r clearfix">
+							<h4>Information</h4>
+							<ul>
+								<li><a href="#">About Us <span class="pull-right">Secure payment</span></a></li>
+								<li><a href="#">Contact Us <span class="pull-right">Sitemap</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_2 text-center clearfix">
+
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<script>
+$(document).ready(function(){
+	/*****Fixed Menu******/
+	var secondaryNav = $('.cd-secondary-nav'),
+	   secondaryNavTopPosition = secondaryNav.offset().top;
+		$(window).on('scroll', function(){
+			if($(window).scrollTop() > secondaryNavTopPosition ) {
+				secondaryNav.addClass('is-fixed');	
+			} else {
+				secondaryNav.removeClass('is-fixed');
+			}
+		});	
+		
+});
+</script>
+
+</body>
+ 
+</html>

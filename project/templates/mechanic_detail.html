@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mechanic Details</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/detail.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+	<script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </head>
+  
+<body>
+<section id="header">
+		<div class="container">
+			<div class="row">
+				<div class="header_1 clearfix">
+					<div class="col-sm-3">
+						<div class="header_1l clearfix">
+							<h2 class="mgt"><a href="/indexafter.html/{{ participant_id }}"><i class="fa fa-car"></i> <span class="col_1">Auto</span>Hub</a></h2>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="header_1m clearfix">
+
+						</div>
+						<div class="header_1r clearfix">
+							<ul class="nav navbar-nav mgt navbar-right">
+								<li class="dropdown">
+									<a class="tag_m1" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i></a>
+									<ul class="dropdown-menu drop_1" role="menu">
+										<li>
+											<div class="drop_1i clearfix">
+												<div class="col-sm-12">
+													<div class="drop_1il text-center clearfix">
+														<h5 class="mgt"><a href="/participant_profile/{{ participant_id }}">View Profile</a></h5>
+														<h5><a href="/indexbefore.html">Log Out</a></h5>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="tag_m1" href="/cart/{{ participant_id }}"  role="button" aria-expanded="false"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="menu" class="clearfix cd-secondary-nav">
+		<nav class="navbar nav_t">
+			<div class="container">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/indexafter.html/{{ participant_id }}"><i class="fa fa-wrench"></i> <span class="col_1">Auto</span> Hub</a>
+				</div>
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+
+						<li><a class="m_tag active_tab" href="/indexafter.html/{{ participant_id }}">Home</a></li>
+						<li>
+							<a class="m_tag" href="/product/{{ participant_id }}"  role="button" aria-expanded="false">Product</a>
+							
+						</li>
+
+						<li><a class="m_tag" href="/forum.html/{{ participant_id }}">Forum</a></li>
+						
+						<li><a class="m_tag" href="/services.html/{{ participant_id }}">Services</a></li>
+						
+						<li><a class="m_tag" href="https://play.unity.com/mg/other/webgl-builds-381059">3D Car Modification</a></li>
+
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+	</section>
+	
+<section id="center" class="clearfix center_shop">
+<div class="container">
+ <div class="row">
+   <div class="center_shop_1 clearfix">
+    <div class="col-sm-6">
+	 <div class="center_shop_1l clearfix">
+	  <h3 class="mgt">Mechanic Details</h3>
+	 </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="center_shop_1r text-right clearfix">
+	  <h5><a class="col_2" href="#">Home</a> / <a class="col_2" href="#">Shop</a> / <span>Product Details</span></h5>
+	 </div>
+	</div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section id="shop_detail">
+<div class="container">
+ <div class="row">
+   <div class="shop_detail_1 clearfix">
+    
+	<div class="col-sm-6">
+	 <div class="center_detail_2_right clearfix">
+		 <h3 class="mgt"> {{ mechanic_details["fname"] }} {{ mechanic_details["lname"] }}</h3>
+		 
+		<p><strong>Company Name:</strong> {{ mechanic_details["companyName"] }}</p>
+		<p><strong>Description:</strong> {{ mechanic_details["description"] }}</p>
+		<p><strong>Specialization:</strong> {{ mechanic_details["specialization"] }}</p>
+		<p><strong>Address:</strong> {{ mechanic_details["address"] }}</p>
+		<p><strong>Contact No:</strong> {{ mechanic_details["phoneNo"] }}</p>
+		<hr>
+		
+		
+		<ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+		
+    </div>
+	</div>
+	
+   </div>
+   <div class="product_detail_1 clearfix">
+		   <ul class="nav nav-tabs tab_1">
+			  
+			  <li class="" id="productReviewTab"><a data-toggle="tab" href="#menu2"><i class="fa fa-cog"></i> Mechanic Review</a></li>
+			  
+           </ul>
+		   <div class="tab-content clearfix">
+			  <div id="menu2" class="tab-pane fade clearfix">
+				 <div class="click clearfix">
+					<div class="col-sm-12">
+					 <div class="menu1i clearfix">
+					   
+					   
+					   {% for review in mechanic_reviews %}
+                <div class="menu1ii mgt clearfix">
+                    <div class="col-sm-9">
+                        <h5><span class="bold">{{ review["name"] }}</span> <span class="date"><i class="fa fa-clock-o"></i> {{ review["date"] }}</span></h5>
+                        <p>{{ review["content"] }}</p>
+                    </div>
+                    <div class="col-sm-3 text-right">
+                        <span class="">
+                            {% for _ in range(review["rating"]) %}
+                                <i class="fa fa-star"></i>
+                            {% endfor %}
+                            {% for _ in range(5 - review["rating"]) %}
+                                <i class="fa fa-star-o"></i>
+                            {% endfor %}
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+					<form method="POST" >
+					   <div class="menu1i1 clearfix">
+					    <div class="col-sm-6 space_left">
+						<h4>ADD A REVIEW</h4>
+						<h5>Name *</h5>
+						<input class="form-control" type="text" name="name">
+						<h5>Your Review</h5>
+						<textarea class="form-control form_1" name="message"></textarea>
+						
+						         
+                                        <div class="rating-input form-check form-check-inline d-flex">
+										<h5>Rate: </h5>
+											<span class="star-rating">
+											<i class="fa fa-star-o" data-rating="1"></i>
+											<i class="fa fa-star-o" data-rating="2"></i>
+											<i class="fa fa-star-o" data-rating="3"></i>
+											<i class="fa fa-star-o" data-rating="4"></i>
+											<i class="fa fa-star-o" data-rating="5"></i>
+											<input type="hidden" name="rating" class="rating-value" value="">
+											</span>
+										</div>			
+						<button type="submit" class="bg button" name="submit_review">Submit</button>
+						</div>
+					   </div>
+					   </form>
+					 </div>
+					</div>
+			   </div>
+			  </div>
+			  </div>
+			</div>
+	 </div>
+ </div>
+</div>
+</section>
+
+<section id="footer" class="clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="footer_1 clearfix">
+					<div class="col-sm-3">
+						<div class="footer_1l clearfix">
+							<h2 class="mgt"><a href="#"><span class="col_1">Auto</span>Hub</a></h2>
+							<p>Our dedicated admin team at AutoHub ensures seamless operations and quality control to provide customers with a reliable source for high-quality automotive spare parts.</p>
+							<div class="footer_1li cleafix">
+								<span class="col_1"><i class="fa fa-headphones"></i></span>
+								<h5>Customer Support</h5>
+								<h4><a href="#">(00) 123 456 789</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div class="footer_1m clearfix">
+
+							<ul class="social-network social-circle">
+								<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+								<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="footer_1r clearfix">
+							<h4>Information</h4>
+							<ul>
+								<li><a href="#">About Us <span class="pull-right">Secure payment</span></a></li>
+								<li><a href="#">Contact Us <span class="pull-right">Sitemap</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_2 text-center clearfix">
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		$(document).ready(function () {
+			/**Fixed Menu***/
+			var secondaryNav = $('.cd-secondary-nav'),
+				secondaryNavTopPosition = secondaryNav.offset().top;
+			$(window).on('scroll', function () {
+				if ($(window).scrollTop() > secondaryNavTopPosition) {
+					secondaryNav.addClass('is-fixed');
+				} else {
+					secondaryNav.removeClass('is-fixed');
+				}
+			});
+
+		});
+	
+
+	</script>
+
+<script>
+	/*
+Credits:
+https://github.com/marcaube/bootstrap-magnify
+*/
+
+
+!function ($) {
+
+    "use strict"; // jshint ;_;
+
+
+    /* MAGNIFY PUBLIC CLASS DEFINITION
+     * =============================== */
+
+    var Magnify = function (element, options) {
+        this.init('magnify', element, options)
+    }
+
+    Magnify.prototype = {
+
+        constructor: Magnify
+
+        , init: function (type, element, options) {
+            var event = 'mousemove'
+                , eventOut = 'mouseleave';
+
+            this.type = type
+            this.$element = $(element)
+            this.options = this.getOptions(options)
+            this.nativeWidth = 0
+            this.nativeHeight = 0
+
+            this.$element.wrap('<div class="magnify" \>');
+            this.$element.parent('.magnify').append('<div class="magnify-large" \>');
+            this.$element.siblings(".magnify-large").css("background","url('" + this.$element.attr("src") + "') no-repeat");
+
+            this.$element.parent('.magnify').on(event + '.' + this.type, $.proxy(this.check, this));
+            this.$element.parent('.magnify').on(eventOut + '.' + this.type, $.proxy(this.check, this));
+        }
+
+        , getOptions: function (options) {
+            options = $.extend({}, $.fn[this.type].defaults, options, this.$element.data())
+
+            if (options.delay && typeof options.delay == 'number') {
+                options.delay = {
+                    show: options.delay
+                    , hide: options.delay
+                }
+            }
+
+            return options
+        }
+
+        , check: function (e) {
+            var container = $(e.currentTarget);
+            var self = container.children('img');
+            var mag = container.children(".magnify-large");
+
+            // Get the native dimensions of the image
+            if(!this.nativeWidth && !this.nativeHeight) {
+                var image = new Image();
+                image.src = self.attr("src");
+
+                this.nativeWidth = image.width;
+                this.nativeHeight = image.height;
+
+            } else {
+
+                var magnifyOffset = container.offset();
+                var mx = e.pageX - magnifyOffset.left;
+                var my = e.pageY - magnifyOffset.top;
+
+                if (mx < container.width() && my < container.height() && mx > 0 && my > 0) {
+                    mag.fadeIn(100);
+                } else {
+                    mag.fadeOut(100);
+                }
+
+                if(mag.is(":visible"))
+                {
+                    var rx = Math.round(mx/container.width()*this.nativeWidth - mag.width()/2)*-1;
+                    var ry = Math.round(my/container.height()*this.nativeHeight - mag.height()/2)*-1;
+                    var bgp = rx + "px " + ry + "px";
+
+                    var px = mx - mag.width()/2;
+                    var py = my - mag.height()/2;
+
+                    mag.css({left: px, top: py, backgroundPosition: bgp});
+                }
+            }
+
+        }
+    }
+
+
+    /* MAGNIFY PLUGIN DEFINITION
+     * ========================= */
+
+    $.fn.magnify = function ( option ) {
+        return this.each(function () {
+            var $this = $(this)
+                , data = $this.data('magnify')
+                , options = typeof option == 'object' && option
+            if (!data) $this.data('tooltip', (data = new Magnify(this, options)))
+            if (typeof option == 'string') data[option]()
+        })
+    }
+
+    $.fn.magnify.Constructor = Magnify
+
+    $.fn.magnify.defaults = {
+        delay: 0
+    }
+
+
+    /* MAGNIFY DATA-API
+     * ================ */
+
+    $(window).on('load', function () {
+        $('[data-toggle="magnify"]').each(function () {
+            var $mag = $(this);
+            $mag.magnify()
+        })
+    })
+
+} ( window.jQuery );
+	</script>
+	
+<script>
+	$(document).on('click', '.number-spinner button', function () {    
+	var btn = $(this),
+		oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+		newVal = 0;
+	
+	if (btn.attr('data-dir') == 'up') {
+		newVal = parseInt(oldValue) + 1;
+	} else {
+		if (oldValue > 1) {
+			newVal = parseInt(oldValue) - 1;
+		} else {
+			newVal = 1;
+		}
+	}
+	btn.closest('.number-spinner').find('input').val(newVal);
+});
+	</script>
+	
+	
+	<script>
+                                    
+								  var stars = document.querySelectorAll('.star-rating i');
+
+								  for (var i = 0; i < stars.length; i++) {
+									stars[i].addEventListener('mouseover', function() {
+									  var rating = this.getAttribute('data-rating');
+									  setRating(rating);
+									});
+
+									stars[i].addEventListener('mouseout', function() {
+									  var rating = document.querySelector('.rating-value').value;
+									  setRating(rating);
+									});
+
+									stars[i].addEventListener('click', function() {
+									  var rating = this.getAttribute('data-rating');
+									  document.querySelector('.rating-value').value = rating;
+									});
+								  }
+
+								  function setRating(rating) {
+									var stars = document.querySelectorAll('.star-rating i');
+
+									for (var i = 0; i < stars.length; i++) {
+									  if (i < rating) {
+										stars[i].classList.remove('fa-star-o');
+										stars[i].classList.add('fa-star');
+									  } else {
+										stars[i].classList.remove('fa-star');
+										stars[i].classList.add('fa-star-o');
+									  }
+									}
+								  }
+								</script>
+								
+								
+								
+	<script>
+    function increaseQuantity() {
+		event.preventDefault();
+        <!-- var quantityInput = document.getElementById("quantity"); -->
+        <!-- quantityInput.value = parseInt(quantityInput.value) + 1; -->
+    }
+
+    function decreaseQuantity() {
+		event.preventDefault();
+        <!-- var quantityInput = document.getElementById("quantity"); -->
+        <!-- if (parseInt(quantityInput.value) > 1) { -->
+            <!-- quantityInput.value = parseInt(quantityInput.value) - 1; -->
+        <!-- } -->
+    }
+</script>							
+
+</body>
+ 
+</html>
